@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program No 12</title>
+</head>
+<body>
+    <p>There are two Different ways to Acess an object Property </p>
+    <p>You Can Use Person.Property or Person["property"]</p>
+    <p id="demo"></p>
+</body>
+<script>
+    var Person={
+        firstName:"John",
+        lastName:"Williams",
+        id:5566
+    };
+    document.getElementById("demo").innerHTML=Person.firstName+ " "+Person.lastName;
+
+</script>
+</html>

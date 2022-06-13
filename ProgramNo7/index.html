@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation of Salary</title>
+</head>
+<script>
+    function cal() {
+        var na=document.getElementById("name").value;
+        var empno=Number(document.getElementById("empno").value);
+        var bs=Number(document.getElementById("bp").value);
+        var hra=0.4*bs;
+        var da=0.6*bs;
+        var gross=bs+hra+da;
+        var  pf=0.13*gross;
+        var tax=0.2*gross;
+        var ded=pf+tax;
+        var ns=gross-ded;
+
+        document.writeln("<center><b><h2>" + "Name : " + na + "</h2></b></center>" + "<br>");
+        document.writeln("<center><b><h2>" + "Emplayee No : " + empno + "</h2></b></center>" + "<br>");
+        document.writeln("<center><b><h2>" + "Basic Salary : " + bs + "</h2></b></center>" + "<br>");
+        document.writeln("<center><b><h2>" + "Gross " + gross+ "</h2></b></center>" + "<br>");
+        document.writeln("<center><b><h2>" + "Net Salary  : " + ns + "</h2></b></center>" + "<br>");
+
+    }
+</script>
+<body>
+    <h2>Employee Details</h2>
+    <br>
+    <h4>Please Fill in the Following Details</h4>
+    <table cellpadding="5" cellspacing="" 5>
+        <tr>
+            <td>Employee Name:</td>
+            <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+            <td>Employee No:</td>
+            <td><input type="text" name="name" id="empno"></td>
+        </tr>
+        <tr>
+            <td>Basic Pay:</td>
+            <td><input type="text" name="name" id="bp"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Submit" onclick="cal()"></td>
+        </tr>
+    </table>
+</body>
+</html>

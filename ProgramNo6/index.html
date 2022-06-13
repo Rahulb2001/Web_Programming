@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Display</title>
+</head>
+<script type="text/javascript">
+var days=["First","second","Third","Fourth","Fifth","Sixth","Seventh","Eigth","Nineth","Tenth","Eleventh","Twelth","Thirteenth","Forteenth","Fifteenth","Sixteenth","Seventeenth","Eighteenth","Nineteenth","Twentynth","Twenty one","Twenty two","Twenty three","Twenty Four","Twenty Five","Twenty Six","Twenty Seven","Twenty Eight","Twenty Nine","Thirty","Thirty One"];
+var months=["January","Febraury","March","April","May","June","July","August","September","October","November","December"];
+var yr="Two Thousand Twenty Two";
+var dt=new Date();
+var date=days[dt.getDate()-1];
+var month=months[dt.getMonth()];
+var year=dt.getFullYear();
+if(year==2022){
+    alert("Todays date is "+date+" "+month+" "+yr);
+}else{
+    alert("Todays date is "+date+""+month+""+year);
+}
+</script>
+<body>
+    
+</body>
+</html>

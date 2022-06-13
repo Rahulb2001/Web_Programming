@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+function movered(){
+    document.getElementById("layer1").style.left="70px";
+}
+function movegreen(){
+    document.getElementById("layer2").style.left="95px";
+}
+function moveblue(){
+    document.getElementById("layer3").style.left="120px";
+}
+function showgreen(status){
+    if(status){
+        document.getElementById("layer2").style.visibility="visible";
+    }else{
+        document.getElementById("layer2").style.visibility="hidden";
+    }
+}
+
+
+
+
+</script>
+<style>
+    #layer1{
+        background-color: red;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 50px;
+        top: 200px;
+    }
+    #layer2{
+        background-color: green;
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        left: 75px;
+        top: 225px;
+    }
+    #layer3{
+        background-color: blue;
+        position: absolute;
+        height: 100px;
+        left: 100px;
+        top: 250px;
+    }
+</style>
+<body>
+    <!-- Write a javascript code block using arrays and generate the current date in words,this should include the day ,month ,year  -->
+    <h2>Basic Animation</h2>
+    <hr></hr>
+    <p id="layer1">layer is in red </p>
+    <p id="layer2">layer is in green </p>
+    <p id="layer3">layer is in blue </p>
+    <form name="animation">
+        <input type="button" name="ani1" value="move red towads right" onclick="movered()">
+        <input type="button" name="ani2" value="move green towads right" onclick="movegreen()">
+        <input type="button" name="ani3" value="move blue towads right" onclick="moveblue()">
+        <br>
+        <input type="button" name="ani4" value="Show green" onclick="showgreen(true)">
+        <input type="button" name="ani5" value="Hide Green" onclick="showgreen(false)">
+    </form>
+
+</body>
+</html>

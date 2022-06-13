@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program No 17</title>
+</head>
+<body>
+    <p>Replace "Microsoft" with "BCA" in the paragraph Below</p>
+    <button onclick="MyFunction()">Try it </button>
+    <p id="demo">Please Visit Microsoft</p>
+</body>
+<script>
+    function MyFunction(){
+        var str=document.getElementById("demo").innerHTML;
+        var txt=str.replace(/Microsoft/i,"BCA");
+        document.getElementById("demo").innerHTML=txt;
+    }
+</script>
+</html>

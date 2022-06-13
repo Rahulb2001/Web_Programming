@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function marks() {
+      var m1 = Number(document.getElementById("English").value);
+      var m2 = Number(document.getElementById("Kannada").value);
+      var m3 = Number(document.getElementById("Hindi").value);
+      var m4 = Number(document.getElementById("Science").value);
+      var m5 = Number(document.getElementById("Social").value);
+      var m6 = Number(document.getElementById("Mathematics").value);
+      var total = m1 + m2 + m3 + m4 + m5 + m6;
+      var name = document.getElementById("Name").value;
+      var regno=document.getElementById("regno").value;
+      document.writeln("<center><b><h2>" + "The Detalis Of the Student Are : " + "</h2></b></center>" + "<br>");
+      document.writeln("<center><b><h2>" + "Name: " + name + "</h2></b></center>" + "<br>");
+      document.writeln("<center><b><h2>" + "Reg No: " + regno + "</h2></b></center>" + "<br>");
+      document.writeln("<center><b><h2>" + "Total Marks : " + total + "</h2></b></center>" + "<br>");
+      var per = (total /600)*100.0;
+      document.writeln("<center><b><h2>" + "Percentage : " + per + "</h2></b></center>" + "<br>");
+      var result = null;
+      var grade = null;
+      if (total < 210) {
+        result = "FAIL";
+        grade = "E";
+      } else if (total > 500 || total < 400) {
+        result = "PASS";
+        grade = "A+";
+      } else if (total > 400 || total < 300) {
+        result = "PASS";
+        grade = "B+";
+      } else if (total > 300 || total < 200) {
+        result = "PASS";
+        grade = "C+";
+      }
+      document.writeln("<center><b><h2>" + "Result : " + result + "</h2></b></center>" + "<br>");
+      document.writeln("<center><b><h2>" + "Grade : " + grade + "</h2></b></center>" + "<br>");
+    }
+  </script>
+  <body>
+    <center>
+      <form action="">
+        <table>
+           <tr>
+            <td><center><h1>Fill the Details</h1></center></td>
+           </tr>
+          <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" id="Name" /></td>
+          </tr>
+          <tr>
+            <td>Reg No</td>
+            <td><input type="text" name="RegNo" id="regno" /></td>
+          </tr>
+          <tr>
+            <td>English</td>
+            <td><input type="text" name="english" id="English" /></td>
+          </tr>
+          <br />
+          <tr>
+            <td>Kannada</td>
+            <td><input type="text" name="Kannada" id="Kannada" /></td>
+          </tr>
+          <br />
+          <tr>
+            <td>Hindi</td>
+            <td><input type="text" name="Hindi" id="Hindi" /></td>
+          </tr>
+          <br />
+          <tr>
+            <td>Science</td>
+            <td><input type="text" name="Science" id="Science" /></td>
+          </tr>
+          <br />
+          <tr>
+            <td>Social Science</td>
+            <td><input type="text" name="Social" id="Social" /></td>
+          </tr>
+          <br />
+          <tr>
+            <td>Mathematics</td>
+            <td><input type="text" name="Mathematics" id="Mathematics" /></td>
+          </tr>
+          <br />
+        </table>
+        <input type="submit" value="submit" onclick="marks()" />
+      </form>
+    </center>
+  </body>
+</html>

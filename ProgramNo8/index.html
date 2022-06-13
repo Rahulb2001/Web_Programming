@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program No 08</title>
+</head>
+<style>
+
+#image1{
+    position: absolute;
+    visibility: visible;
+    width: 300px;
+    height: 200px;
+    left: 500px;
+}
+#image2{
+    position: absolute;
+    visibility: hidden;
+    width: 300px;
+    height: 200px;
+    left: 500px;
+}
+</style>
+<body>
+    <center><h2>Mouse Over and Mouse out </h2></center>
+    <img src="images/img1.jpg" alt="" id="image1" onmouseover="changeImage()" onmouseout="changeImage()" class="img">
+    <img src="images/img2.png" alt="" id="image2" onmouseover="changeImage()" onmouseout="changeImage()" class="img">
+
+
+</body>
+<script>
+    function changeImage(){
+        var img1=document.getElementById("image1").style;
+        var img2=document.getElementById("image2").style;
+        if(img1.visibility="visible"){
+            img1.visibility="hidden";
+            img2.visibility="visible";
+
+        }else{
+            img1.visibility="visible";
+            img2.visibility="hidden"
+
+        }
+    }
+</script>
+</html>

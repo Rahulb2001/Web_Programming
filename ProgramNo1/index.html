@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill textbox</title>
+    <script type="text/javascript">
+        function fn1() {
+            var t1 = document.getElementById("fname").value;
+            var t2 = document.getElementById("lname").value;
+            var t3 = document.getElementById("age").value;
+            var t4 = document.getElementById("MobileNumber").value;
+            var t5 = document.getElementById("pin").value;
+            var t6 = document.getElementById("address").value;
+            if (t1 == "" || t2==""||t3==""|| t4=="" || t5=="" ||t6=="") {
+                alert("Fields Not Filled Completeley");
+            } else{
+                alert("Text Boxes Filled Sucessfully ")
+
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h2>Program No 1 Validate Incomplete TextBox</h2>
+    <hr />
+    <form name="textboxform">
+        <table cellpadding="5" cellspacing="5">
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" name="fname" id="fname" /></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lname" id="lname" /></td>
+            </tr>
+
+            <tr>
+                <td>Age</td>
+                <td><input type="text" name="age" id="age" /></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text" name="MobileNumber" id="MobileNumber" /></td>
+            </tr>
+            <tr>
+                <td>Pin Code</td>
+                <td><input type="text" name="pin" id="pin" /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="address" id="address" /></td>
+            </tr>
+            <td align="center">
+            <td>
+                <button onclick="fn1()" id="btn1">Click me</button>
+            </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
