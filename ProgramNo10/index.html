@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 10</title>
+    <script>
+        function findmousepointer(evt)
+        {
+            document.getElementById("showXY").value="ClientX=" +evt.clientX+ "Client Y=" +evt.clientY+ "Screen X="+evt.screenX+ "Screen Y="+evt.screenY;        
+        }
+    
+    </script>
+</head>
+
+<body onmousemove="findmousepointer(event)">
+    <form>
+        Mouse Positions are:<input type="text" id="showXY" size="50"/>
+    </form>
+</body>
+
+</html>
